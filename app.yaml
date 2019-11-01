@@ -8,7 +8,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: jsp-counter-role
-  #namespace: jsp-counter-ns
+  namespace: hello-tekton
 rules:
 - apiGroups: [""]
   verbs: ["get", "list"]
@@ -18,7 +18,7 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: jsp-counter-rolebinding
-  #namespace: jsp-counter-ns
+  namespace: hello-tekton
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -26,13 +26,13 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: jsp-counter-sa
-  #namespace: jsp-counter-ns
+  namespace: hello-tekton
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jsp-counter-deployment
-  #namespace: jsp-counter-ns
+  namespace: hello-tekton
   labels:
     app: jsp-counter
 spec:
