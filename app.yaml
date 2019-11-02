@@ -1,11 +1,11 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: tomcat-cluster
-  labels:
-    app: jsp-counter
-    server: tomcat
----
+#apiVersion: v1
+#kind: Namespace
+#metadata:
+#  name: tomcat-cluster
+#  labels:
+#    app: jsp-counter
+#    server: tomcat
+#---
 kind: ServiceAccount
 apiVersion: v1
 metadata:
